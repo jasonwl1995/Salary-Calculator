@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salary Calculator App</title>
+    <link rel="stylesheet" href="stylez/salary.css" />
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/salary.js"></script>
+  </head>
+  <body>
+    <h1>Salary Calculator</h1>
+
+    <h2>Add Employee</h2>
+    <form>
+      <!-- Don't forget event.preventDefault() !!!-->
+
+      <!-- Name input -->
+      <input type="text" placeholder="First Name" id="FNinput" />
+
+      <input type="text" placeholder="Last Name" id="LNinput" />
+      <input type="text" placeholder="ID" id="IDinput" />
+      <input type="text" placeholder="Title" id="Tinput" />
+      <input type="text" placeholder="Annual Salary" id="ASinput" />
+
+      <input type="submit" placeholder="Submit" id="addEmpBtn" />
+    </form>
+    <!-- Employee Data table-->
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Annual Salary</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="employeeTable"></tbody>
+    </table>
+  </body>
+</html>
