@@ -21,6 +21,10 @@ function onReady() {
   // On Add Employee button click
   // Will save employee info to array
   $(document).on('click', '#addEmpBtn', onAddEmp);
+
+  // Add delete button to onReady
+  $(document).on('click', '.deleteBtn', deleteEmployee);
+  console.log('deleteBtn is', $('.deleteBtn'));
 }
 
 // Grab input from DOM
@@ -63,13 +67,28 @@ function renderEmployees(employees) {
     // Add comma every 3 digits, ref = https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
     let salarystr = obj.annualSalary.toLocaleString();
     $('#employeeTable').append(`
-      <tr>
+      <tr class="employee-item">
         <td>${obj.firstName}</td>
         <td>${obj.lastName}</td>
         <td>${obj.ID}</td>
         <td>${obj.title}</td>
         <td>${'$' + salarystr}</td>
+        <td> 
+            <button class="deleteBtn">Delete</button>
+        </td>
       </tr>
     `);
   }
+}
+
+// Remove employee from list on click
+function deleteEmployee() {
+  let thisEmployee = $(this);
+  console.log('deleting test', thisEmployee);
+
+  for (let obj of employeeList) {
+    console.log(obj);
+  }
+  // ref = https://stackoverflow.com/questions/6647736/how-to-delete-parent-element-using-jquery
+  $(this).parents('.employee-item').remove();
 }
