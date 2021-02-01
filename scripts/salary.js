@@ -14,6 +14,7 @@ console.log('Salary.js');
 $(document).ready(onReady);
 
 let employeeList = [];
+let TotalMonthly = 0;
 
 function onReady() {
   console.log('Im Ready');
@@ -57,6 +58,12 @@ function onAddEmp(evt) {
   employeeList.push(employee);
   console.log('employees:', employeeList);
 
+  TotalMonthly = 0;
+  for (let obj of employeeList) {
+    TotalMonthly += obj.annualSalary;
+  }
+  TotalMonthly = Math.floor(TotalMonthly / 12);
+
   // Render inventory to the DOM
   renderEmployees(employeeList);
 }
@@ -79,6 +86,8 @@ function renderEmployees(employees) {
       </tr>
     `);
   }
+  let salarystr2 = TotalMonthly.toLocaleString();
+  $('#totalMonthly').text('Total Monthly: $' + salarystr2);
 }
 
 // Remove employee from list on click
