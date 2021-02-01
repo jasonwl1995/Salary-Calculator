@@ -46,5 +46,30 @@ function onAddEmp(evt) {
     title: title,
     annualSalary: Number(annualSalary),
   };
+
   console.log('got an employee', employee);
+
+  // Push employee info into an array of employees.
+  employeeList.push(employee);
+  console.log('employees:', employeeList);
+
+  // Render inventory to the DOM
+  renderEmployees(employeeList);
+}
+
+function renderEmployees(employees) {
+  $('#employeeTable').empty();
+  for (let obj of employees) {
+    // Add comma every 3 digits, ref = https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
+    let salarystr = obj.annualSalary.toLocaleString();
+    $('#employeeTable').append(`
+      <tr>
+        <td>${obj.firstName}</td>
+        <td>${obj.lastName}</td>
+        <td>${obj.ID}</td>
+        <td>${obj.title}</td>
+        <td>${'$' + salarystr}</td>
+      </tr>
+    `);
+  }
 }
