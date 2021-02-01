@@ -42,6 +42,7 @@ function onAddEmp(evt) {
   let ID = $('#IDinput').val();
   let title = $('#Tinput').val();
   let annualSalary = $('#ASinput').val();
+  // $('ASinput').css({ 'text-align': 'right' });
 
   // Create an "employee" object
   let employee = {
