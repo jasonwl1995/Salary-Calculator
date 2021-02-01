@@ -1,42 +1,45 @@
-# Weekend Challenge: jQuery Salary Calculator
-Create an application that records employee salaries and adds salaries up to report monthly costs. 
+# Salary Calculator
 
-## Topics Covered
-- JavaScript
-- jQuery - Selectors, append, and event handling
+[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
-## Assignment
+## Description
 
-The application should have an input form that collects _employee first name, last name, ID number, job title, annual salary_.
+Description
+Duration: 2 Day Sprint
 
-A 'Submit' button should collect the form information, store the information to calculate monthly costs, append information to the DOM and clear the input fields. Using the stored information, calculate monthly costs and append this to the to DOM. If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
+This salary calculator can be used to log employee information and display all stored information on
+a table for easy access and viewing. You are also able to delete any insertions at any time.
 
-Create a delete button that removes an employee from the DOM. For Base mode, it does **not** need to remove that Employee's salary from the reported total.
+Screen Shot
+Include one or two screen shots of your project here (optional). Remove if unused.
 
-### Files Provided
-No files have been provided (just instructions.md and a readme.md). Instead of forking and cloning this repo, please choose "Use This Template" (green button) and name your new repo "jquery-salary-calculator" and clone down from there. Make sure to commit regularily!
+Prerequisite:
+jquery.js
+https://code.jquery.com/jquery-3.5.1.min.js
 
-### Wireframe
+List other prerequisites here
+Installation
+How do you get your application up and running? This is a step by step list for how another developer could get this project up and running. The good target audience in terms of knowledge, would be a fellow Primer from another cohort being able to spin up this project. Note that you do not need a paragraph here to intro Installation. It should be step-by-step.
 
-![Wireframe](salary-calc-wireframe.png)
+If your application has secret keys (for example -- Twilio), make sure you tell them how to set that up, both in getting the key and then what to call it in the .env file.
 
-## Stretch Mode
+Create a database named your database name,
+The queries in the tables.sql file are set up to create all the necessary tables and populate the needed data to allow the application to run correctly. The project is built on Postgres, so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries,
+Open up your editor of choice and run an npm install
+Run npm run server in your terminal
+Run npm run client in your terminal
+The npm run client command will open up a new browser tab for you!
 
-Add styling or extra functionality that fits with the theme of this assignment.
+Usage
 
-Once the employee is deleted, update the total spend on salaries account for this employee's removal. This will require that the logic knows which element was removed. You will need to use `.text()` as a getter or look into jQuery's `.data()` function. This is tricky! 
+Built With
+Jquery, github, VS code.
 
-## Reminder About Modes
+License
+MIT
 
-Above, we introduced the concept of levels of difficulty. "Mode" is how we will typically refer to each level. Below is a brief explanation of
+Acknowledgement
+Thanks to Prime Digital Academy who equipped and helped me to make this application a reality.
 
-* what to expect when attempting each mode
-* if they are required or not
-
-Mode | Description
---- | ---
-Base | required
-Stretch | optional, stretches your understanding and may require additional research
-
-## Assignment Submission
-Check in your repo, then turn in your work via the Prime Academy Assignment Application at [http://primeacademy.io](http://primeacademy.io), as usual and don't hesitate to hit up the Slack channel as needed!
+Support
+If you have suggestions or issues, please email me at jasonwl_1995@yahoo.com
