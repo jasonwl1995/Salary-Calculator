@@ -13,14 +13,6 @@ console.log('Salary.js');
 
 $(document).ready(onReady);
 
-const employee = {
-  firstName: '',
-  lastName: '',
-  ID: '',
-  title: '',
-  annualSalary: 0,
-};
-
 let employeeList = [];
 
 function onReady() {
@@ -31,6 +23,28 @@ function onReady() {
   $(document).on('click', '#addEmpBtn', onAddEmp);
 }
 
-function onAddEmp() {
+// Grab input from DOM
+// create "employee" object
+// Push object into employee array
+function onAddEmp(evt) {
+  evt.preventDefault();
+
   console.log('ready to add');
+
+  // Grab input data from the DOM
+  let firstName = $('#FNinput').val();
+  let lastName = $('#LNinput').val();
+  let ID = $('#IDinput').val();
+  let title = $('#Tinput').val();
+  let annualSalary = $('#ASinput').val();
+
+  // Create an "employee" object
+  let employee = {
+    firstName: firstName,
+    lastName: lastName,
+    ID: ID,
+    title: title,
+    annualSalary: Number(annualSalary),
+  };
+  console.log('got an employee', employee);
 }
