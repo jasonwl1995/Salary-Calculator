@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Salary Calculator App</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="scripts/jquery.js"></script>
     <script src="scripts/salary.js"></script>
   </head>
@@ -20,9 +21,13 @@
       <input type="text" placeholder="ID" id="IDinput" />
       <input type="text" placeholder="Title" id="Tinput" />
       <input type="text" placeholder="Annual Salary" id="ASinput" />
-
-      <input type="submit" placeholder="Submit" id="addEmpBtn" />
+      <br />
+      <div id="button">
+        <input type="submit" placeholder="Submit" id="addEmpBtn" />
+      </div>
     </form>
+
+    <div>Employees</div>
     <!-- Employee Data table-->
     <table>
       <thead>

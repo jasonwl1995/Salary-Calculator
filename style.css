@@ -1,0 +1,18 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+h1 {
+  background-color: grey;
+  color: white;
+  text-align: center;
+  size: medium;
+  padding: 20px;
+}
+
+#button {
+  float: right;
+}
